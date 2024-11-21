@@ -2,7 +2,7 @@ $(document).ready(function() {
     let accordionData = [];
 
     // Load JSON data from the file
-    $.getJSON("/content/files/theme/json/participants_portal_acc.json", function(data) {
+    $.getJSON("/json/participants_portal_acc.json", function(data) {
         accordionData = data;
         renderAccordion(accordionData); // Display all accordions initially but disabled
     });
