@@ -2,7 +2,7 @@ $(document).ready(function() {
     let accordionData = [];
 
     // Load JSON data from the file
-    $.getJSON("json/participants_portal_acc.json", function(data) {
+    $.getJSON("/content/files/theme/json/participants_portal_acc.json", function(data) {
         accordionData = data;
         renderAccordion(accordionData); // Display all accordions initially but disabled
     });
@@ -19,7 +19,7 @@ $(document).ready(function() {
         const split2 = selectedValues.slice(2, 4);
     
         // Filter accordion data based on the split criteria
-        const filteredData = selectedValues.length > 3
+        const filteredData = selectedValues.length > 0
             ? accordionData.map(section => ({
                 ...section,
                 table: section.table.filter(row => {
@@ -30,11 +30,11 @@ $(document).ready(function() {
     
                     // Check for split1: all values in split1 should exactly match values in dropDownValues
                     const split1Match = split1.every(value => dropDownValues.includes(value));
-                    
+                    console.log('split1Match for row:', row, '=>', split1Match); // Log split1Match for exact matches
     
                     // Check for split2: at least one value in split2 should exactly match values in dropDownValues
-                    const split2Match = split2.some(value => dropDownValues.includes(value));
-                    
+                    const split2Match = split2.every(value => dropDownValues.includes(value));
+                    console.log('split2Match for row:', row, '=>', split2Match); // Log split2Match for exact matches
     
                     // Only include the row if both split1 and split2 criteria are met
                     return split1Match && split2Match;
@@ -47,6 +47,7 @@ $(document).ready(function() {
         const isEnabled = selectedValues.length === $('.on-dropdown').length;
         renderAccordion(filteredData, isEnabled); // Re-render accordion with filtered data and enabled state
     }
+    
     
     
 
@@ -99,15 +100,27 @@ $(document).ready(function() {
                     subCounter = 1;
                 }
 
-                const rowClass = row.tr_value === "sub" ? "on-acc-tbl-subcnt" : "";
-                sectionHtml += `
-                    <tr class="${rowClass}">
-                        <td>${displayNumber}</td>
-                        <td>${row.item}</td>
-                        <td>${row.verticals}</td>
-                        <td>${row.sla}</td>
-                    </tr>
-                `;
+                const rowClass = row.tr_value === "sub" ? "on-acc-tbl-subcnt" : "on-acc-tbl-main-head";
+
+                 // Dynamically add colspan for specific rows
+                if (rowClass === "on-acc-tbl-main-head") {
+                    sectionHtml += `
+                        <tr class="${rowClass}">
+                            <td>${displayNumber}</td>
+                            <td colspan="2">${row.item}</td>
+                            <td>${row.sla}</td>
+                        </tr>
+                    `;
+                } else {
+                    sectionHtml += `
+                        <tr class="${rowClass}">
+                            <td>${displayNumber}</td>
+                            <td>${row.item}</td>
+                            <td>${row.verticals}</td>
+                            <td>${row.sla}</td>
+                        </tr>
+                    `;
+                }
             });
 
             sectionHtml += `
