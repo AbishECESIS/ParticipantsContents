@@ -1,0 +1,76 @@
+/* Banner Section  */
+.to-bnr-title{
+    padding-bottom: 10px;
+}
+
+/* Videos Section  */
+.list-of-videos-section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.list-of-vid-main-div {
+    border: 2px solid #e0e1e4;
+    border-radius: 30px;
+    padding: 16px 20px 10px 20px;
+}
+.list-of-vid-title {
+    padding: 16px 0;
+    color: #333333 !important;
+    font-size: 30px !important;
+    font-weight: 600;
+}
+.vid-thump{
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.vid-thump img{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    max-height: 210px;
+}
+.vid-title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.vid-cnt{
+    color: #606161 !important;
+    line-height: 24px;
+}
+.video-card{
+    margin-bottom: 26px;
+}
+
+@media(max-width:1400px){
+    .vid-main-div{
+        width: 60% !important;
+    }
+}
+
+@media (max-width:991px) {
+    .vid-cnt{
+        line-height: 18px;
+    }
+    .list-of-vid-title{
+        font-size: 28px !important;
+    }
+    .vid-thump {
+        margin-bottom: 14px;
+    }
+}
+@media (max-width:575px) {
+    .list-of-vid-main-div{
+        padding: 8px;
+        border-radius: 11px;
+    }
+}
+@media (max-width:375px) {
+    .vid-title{
+        margin-bottom: 10px;
+    }
+    .video-card {
+        margin-bottom: 18px;
+    }
+}

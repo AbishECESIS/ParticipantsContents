@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participants Videos</title>
+
+    <link rel="preload" href="css/app.css" as="style" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/base_v1.css">
+    <link rel="stylesheet" href="css/main.min.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/pramaan.css">
+    <link rel="stylesheet" href="css/pr-videos.css">
+    <link rel="stylesheet" href="css/ondc-participant-portal.css">
+</head>
+<body>
+
+    
+
+<!-- Header Nav Bar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="https://ondc.org/assets/theme/images/ondc_registered_logo.svg" class="header-logo" alt="ONDC | Open Network for Digital Commerce">
+    </a>
+    <div class="btn-and-hamb">
+        <div class="d-lg-none nav-signin-div">
+            <button class="nav-signin-btn" onclick="window.open('https://portal.ondc.org/login','_blank')">Sign in</button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav pr-menu-items">
+        <li class="nav-item">
+          <p class="home-tab"><a class="nav-link" href="/ondc-participant-portal">Home</a></p>
+        </li>
+        <li class="nav-item">
+          <p class="steps-to-join-tab"><a class="nav-link" href="/ondc-participant-portal#integration-section">Integration Guide</a></p>
+        </li>
+        <li class="nav-item">
+          <p class="videos-tab active"><a class="nav-link" aria-current="page" href="#">Videos</a></p>
+        </li>
+        <li class="nav-item">
+          <p class="need-help-tab"><a class="nav-link" href="#need-help-tab">Need help</a></p>
+        </li>
+        <!-- <li class="nav-item">
+          <p class="faqs-tab"><a class="nav-link" href="#">FAQs</a></p>
+        </li> -->
+      </ul>
+    </div>
+    <div class="nav-signin-div d-none d-lg-block">
+        <button class="nav-signin-btn" onclick="window.open('https://portal.ondc.org/login','_blank')">Sign in</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner Section  -->
+<div class="tool-banner-section">
+    <div class="container">
+        <p class="to-bnr-title">Videos</p>
+        <!-- <p class="to-bnr-cnt">Select the right Technology Service Provider who can help you close the integration journey faster. Choose from the below list of TSPs, do make sure that TSP is live on the domains that you require as per Pramaan. This gives an assurance that the software being supplied by TSP is capable of interacting using ONDC API specifications.</p> -->
+    </div>
+</div>
+<!-- Sub Navigation Section  -->
+<div class="sub-nav-section">
+    <div class="container">
+        <p><a href="/ondc-participant-portal"><b>Home</b></a></p>
+        <p>></p>
+        <p>Videos</p>
+    </div>
+</div>
+
+<!-- list of Videos Section  -->
+<div class="list-of-videos-section">
+    <div class="container">
+        <div class="list-of-vid-main-div">
+            <p class="list-of-vid-title">List of Videos</p>
+            <div class="videos-div row">
+                <div class="video-card  col-6 col-md-4">
+                    <div class="vid-thump" onclick="VideoUpdate('doing_business_on_ondc_network')"><img src="https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/video_poster/doing_business_on_ondc_network.png" alt="Video"></div>
+                    <p class="vid-title">Doing Business on ONDC Network</p>
+                    <!-- <p class="vid-cnt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p> -->
+                </div>
+                <div class="video-card  col-6 col-md-4">
+                    <div class="vid-thump" onclick="VideoUpdate('understanding_ondc_architecture')"><img src="https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/video_poster/understanding_ondc_architecture.png" alt="Video"></div>
+                    <p class="vid-title">Understanding ONDC Architecture</p>
+                    <!-- <p class="vid-cnt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p> -->
+                </div>
+                <div class="video-card  col-6 col-md-4">
+                    <div class="vid-thump" onclick="VideoUpdate('understand_policy_requirements')"><img src="https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/video_poster/understand_policy_requirements.png" alt="Video"></div>
+                    <p class="vid-title">Understand Policy requirements</p>
+                    <!-- <p class="vid-cnt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade video-popup" id="video-popup" tabindex="-1" aria-labelledby="video-popupLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content vid-main-div">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <video class="vid-pop-video" id="video-popup-link" controls></video>
+        <p class="vid-pop-title" id="video-pop-title">Title here</p>
+        <!-- <p class="vid-pop-cnt" id="video-popup-cnt">Content here</p> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section  -->
+<div class="pr-footer-section" id="need-help-tab">
+    <div class="container">
+        <p class="pr-footer-title">Need Help</p>
+        <div class="row">
+            <div class="mb-4 col-sm-12 col-md-12">
+                <p class="pr-f-main-cnt"><b>Email Support</b></p>
+                <p class="pr-f-sub-cnt">Contact us: <a href="mailto:portal-support@ondc.org">portal-support@ondc.org</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="policy-section">
+    <div class="policy-div">
+        <p><a href="">Privacy policy</a></p>
+        <p>|</p>
+        <p><a href="">Terms of use</a></p>
+    </div>
+    <div class="copyright-div">ONDC | Open Network for Digital Commerce © 2024</div>
+    <div class="social-icons-div">
+        <a href="https://www.linkedin.com/company/open-network-for-digital-commerce" target="_blank" rel="noopener" aria-label="LinkedIn"></a><img src="images/pramaan/linkedin.png"  alt="linkedin"></a>
+        <a href="https://www.instagram.com/ondc_official/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/pramaan/instagram.png"  alt="instagram"></a>
+        <a href="https://www.youtube.com/@ondc1300" target="_blank" rel="noopener" aria-label="Youtube"><img src="images/pramaan/youtube.png"  alt="youtube"></a>
+        <a href="https://www.facebook.com/pages/category/Nonprofit-organization/ONDC-Ltd-103148322189702/" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/pramaan/facebook.png"  alt="facebook"></a>       
+        <a href="https://twitter.com/ONDC_Official" target="_blank" rel="noopener" aria-label="Twitter"><img src="images/pramaan/twitter.png"  alt="twitter"></a> 
+        <a href="https://www.kooapp.com/profile/OpenNetworkForDigitalCommerce" target="_blank" rel="noopener" aria-label="Kooapp"><img src="images/pramaan/kooapp.png"  alt="kooapp"></a>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/85a73f991c.js" crossorigin="anonymous" wfd-invisible="true"></script>
+    <script type="text/javascript" src="code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="js/pramaan.js"></script> -->
+<script src="js/pr-videos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+    "doing_business_on_ondc_network": {
+        "title": "Doing Business on ONDC Network",
+        "content": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+        "poster_image":"https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/video_poster/doing_business_on_ondc_network.png",
+        "link": "https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/doing_business_on_ondc_network.mp4"
+    },
+    "understanding_ondc_architecture": {
+        "title": "Understanding ONDC Architecture",
+        "content": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+        "poster_image":"https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/video_poster/understanding_ondc_architecture.png",
+        "link": "https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/understanding_ondc_architecture.mp4"
+    },
+    "understand_policy_requirements": {
+        "title": "Understand Policy requirements",
+        "content": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+        "poster_image":"https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/video_poster/understand_policy_requirements.png",
+        "link": "https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/pramaan_videos/understand_policy_requirements.mp4"
+    }
+}
